@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    .parent{
+        width: 1000px;
+        height: 400px;
+        margin: auto;
+        display: flex;
+        text-align: center;
+        transform: 500ms;
+        
+        /* justify-content: center; */
+    }
+   
+    .box{
+        width: 300px;
+        font-size: 100px;
+        /* border: 1px solid red; */
+        padding: 5px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
+</head>
+<body>
+    <div class="parent">
+     <div class="box"><img src="img2.jpeg" alt=""></div>
+     <div class="box"><img src="img1.jpg" alt=""></div>
+     <div class="box" ><img src="img3.jpeg" alt=""></div>
+     <div class="box" ><img src="img4.jpeg" alt=""></div>
+ 
+    </div>
+    <script>
+        const boxes = document.querySelectorAll(".box")
+
+        for(box of boxes){
+            const order = Math.floor(Math.random()*100)
+            box.style.order = order;
+        }
+    </script>
+</body>
+</html>
